@@ -1,0 +1,195 @@
+.img{
+    width:200px;
+    height:300px;
+    border: 1px solid yellow;
+    background-image: url("/static/imgs/children.jpg");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    transition: 3s;
+}
+.img::before{
+    content: "";
+    width:100%;
+    height:100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    left:50%;
+}
+.img::after{
+    content: "";
+    width:100%;
+    height:100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    right:50%;
+}
+.img:hover::before{
+    content:"";
+    transition: 3s;
+    left:0;
+}
+.img:hover::after{
+    content:"";
+    transition: 3s;
+    right:0;
+}
+.item{
+    width:120px;
+    height:120px;
+    background-color: aqua;
+    animation-name: zzz;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes zzz {
+    0%{
+        background-color: aliceblue;
+    }
+    25%{
+        background-color: antiquewhite;
+    }
+    50%{
+        background-color: aqua;
+    }
+    75%{
+        background-color: aquamarine;
+    }
+    100%{
+        background-color: black;
+    }
+}
+.parent{
+    background: #000;
+    height: 400px;
+    width: 120px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+}
+.item1{
+    width:120px;
+    height:120px;
+    background-color: #808080;
+    border-radius: 50%;
+}
+.red{
+    animation-name: rrr;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.yellow{
+    animation-name: yyy;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.green{
+    animation-name: ggg;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rrr {
+    0%,
+    33% {
+        background-color: red;
+    }
+    34%,
+    100% {
+        background-color: gray;
+    }
+}
+@keyframes yyy {
+    0%,
+    33% {
+        background-color: gray;
+    }
+    34%,
+    66% {
+        background-color: yellow;
+    }
+    67%,
+    100% {
+        background-color: gray;
+    }
+}
+@keyframes ggg {
+    0%,
+    66% {
+        background-color: gray;
+    }
+    67%,
+    100% {
+        background-color: green;
+    }
+}
+
+.main{
+    justify-content:center;
+    align-items: center;
+}
+.item2{
+    width:120px;
+    height:120px;
+    background-color: fuchsia;
+    border: 10px solid gray;
+    border-radius: 50%;
+    border-top-color:transparent;
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+p{
+    position: absolute;  
+}
+@keyframes rotate {
+    from{
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.main1{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.item3{
+    width:120px;
+    height:120px;
+    background-color: fuchsia;
+    border: 10px solid gray;
+    border-radius: 50%;
+    border-top-color:transparent;
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+p{
+    position: absolute;  
+}
+@keyframes rotate {
+    from{
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
